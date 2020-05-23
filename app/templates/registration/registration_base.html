@@ -7,10 +7,6 @@
 
         <div class="container">
         
-            <div id="messages" ic-get-from="{% url 'messages' %}" ic-deps="*">
-                {% include "messages.html" %}
-            </div>
-
                 <div class="columns is-centered">
                     <div class="column is-5-tablet is-4-desktop is-4-widescreen ">
 
@@ -18,6 +14,7 @@
                             <div class="card-header">
                                 <div class="card-header-title">
                                 {% block head_title %}
+                                Duck App
                                 {% endblock %}
                                 </div>
                                 <div class="card-header-icon">

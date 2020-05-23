@@ -19,6 +19,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -27,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_seed',
     'ducks',
+    'loginas',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -112,3 +115,18 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# django registration
+REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+ACCOUNT_AUTHENTICATED_REGISTRATION_REDIRECTS=True
+LOGIN_REDIRECT_URL ="/"
+LOGINAS_REDIRECT_URL = '/'
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+        messages.ERROR: 'danger',
+        messages.SUCCESS: 'success',
+        messages.WARNING: 'warning',
+        messages.INFO: 'info'
+}
+

@@ -1,21 +1,57 @@
-<!DOCTYPE html>
+{%load i18n %}<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Rubber Duck app</title>
 	<link rel="stylesheet" href="{{MEDIA_URL}}dist/main.css">
   </head>
   <body>
+
+      {% block body %}
+          
+
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
+        {% block content %}
+            
+                    <div class="hero  is-primary is-bold">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns is-vcentered">
+                            <div class="column is-6 ">
+                                <h1 class="title is-spaced is-size-1-desktop">
+                                    The Duck app
+                                </h1>
+                                <h2 class="subtitle">
+                                    A place when the Phd's can research all related to Ducks .. 
+                                </h2>
+                                <div class="buttons centered">
+                                    {% if request.user.is_authenticated %}
+                                    hola ... {{request.user.username}}
+                                        {% else %}
+                                            
+                                    <a href="{% url 'registration_register' %}"
+                                        class="button is-success is-light is-large">
+                                        {% trans "Signup Cuak" %}
+                                        </a>
+                                    <a href="{% url 'auth_login' %}" class="button is-outlined is-info is-light is-large">Login Cuack</a>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+
+                            <div class="column">
+                                <img class="card shadow" src="https://i.imgur.com/jWmoHKOl.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endblock content %}
     </div>
   </section>
+      {% endblock body %}
   </body>
 </html>
