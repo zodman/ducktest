@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "parcel watch  media/src/*  -d media/dist/ --public-url /media/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.2",
+    "cross-env": "^7.0.2",
+    "css-spaces": "git+https://github.com/zodman/css-spaces.git",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.5"
+  }
+}
