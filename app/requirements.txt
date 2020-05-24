@@ -4,12 +4,24 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
+bake-cli==0.12.0          # via -r requirements.in
+click==7.1.2              # via bake-cli
+colorama==0.4.3           # via bake-cli
+coverage==5.1             # via -r requirements.in
+decorator==4.4.2          # via networkx
+delegator.py==0.1.1       # via bake-cli
 django-loginas==0.3.6     # via -r requirements.in
+django-registration-redux==2.8  # via -r requirements.in
 django-seed==0.2.2        # via -r requirements.in
+django-tables2==2.3.1     # via -r requirements.in
+django-test-plus==1.4.0   # via -r requirements.in
 django-widget-tweaks==1.4.8  # via -r requirements.in
-django==1.11.29           # via -r requirements.in, django-seed
+django==1.11.29           # via -r requirements.in, django-seed, django-tables2
 faker==3.0.1              # via django-seed
-ipaddress==1.0.23         # via faker
+networkx==2.4             # via bake-cli
+pexpect==4.8.0            # via delegator.py
+ptyprocess==0.6.0         # via pexpect
+pygments==2.6.1           # via bake-cli
 python-dateutil==2.8.1    # via faker
 pytz==2020.1              # via django
 six==1.15.0               # via faker, python-dateutil

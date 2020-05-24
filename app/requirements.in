@@ -3,8 +3,9 @@ django-seed
 django-loginas
 django-widget-tweaks
 django-tables2
-bake-cli
+django-registration-redux
 
 
 coverage
 django-test-plus
+bake-cli==0.12.0
