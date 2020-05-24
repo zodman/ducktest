@@ -22,7 +22,7 @@
             </div>
 		{% if  record %}		
 			<div class="control is-right">
-				<a class="button is-danger">Delete</a>
+                <a class="button is-danger" href="{% url 'record_del' record.pk %}">Delete</a>
 			</div>
 		{% endif %}
         </div>

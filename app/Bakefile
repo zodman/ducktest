@@ -1,4 +1,4 @@
 reinit:
-    rm db.sqlite
+    rm db.sqlite3
     python manage.py migrate
     python populate.py
