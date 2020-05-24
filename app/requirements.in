@@ -4,3 +4,7 @@ django-loginas
 django-widget-tweaks
 django-tables2
 bake-cli
+
+
+coverage
+django-test-plus

@@ -8,6 +8,7 @@ class FoodType(models.Model):
     name = models.CharField(max_length=100, unique=True)
     class Meta:
         ordering = ("name",)
+        get_latest_by = "id"
 
     def __str__(self):
         return self.name
@@ -17,6 +18,7 @@ class DuckType(models.Model):
 
     class Meta:
         ordering = ("name", )
+        get_latest_by = "id"
 
 
     def __str__(self):
@@ -31,8 +33,10 @@ class Record(models.Model):
     howmany_ducks = models.PositiveIntegerField()
     duck_type= models.ForeignKey(DuckType, on_delete=models.CASCADE)
     howmuch_food = models.CharField(max_length=100)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ("recorddate",)
+        get_latest_by = "id"
 
     def __str__(self):
         return f'{self.recorddate}'

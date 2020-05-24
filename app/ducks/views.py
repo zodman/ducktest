@@ -34,7 +34,8 @@ record_edit = login_required(RecordEdit.as_view())
 
 class RecordCreate(SuccessMessageMixin, CreateView):
     model = Record
-    fields = "__all__"
+    fields =("recorddate","food_type", "location", "howmany_ducks",
+            "howmuch_food", "duck_type") 
     success_url = reverse_lazy("record_list")
     success_message  = "Record created"
 
