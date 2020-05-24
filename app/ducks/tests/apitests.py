@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from test_plus.test import TestCase
 from django_seed import Seed
-from .models import Record, DuckType, FoodType
+from ..models import Record, DuckType, FoodType
 from django.utils import timezone
 import faker
 

@@ -6,7 +6,6 @@ omit = */settings.py, */tests/*, */migrations/*, */urls.py, */settings/*
 source = .
 
 [report]
-skip_covered= true
 show_missing = true
 exclude_lines = 
     def __str__
