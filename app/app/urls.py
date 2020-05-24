@@ -10,5 +10,6 @@ urlpatterns = [
    path('admin/', admin.site.urls),
    path("admin/", include('loginas.urls')),
    path('accounts/', include('registration.backends.simple.urls')),
+   path('records/', include("ducks.urls")),
    path('', TemplateView.as_view(template_name='base.html'), name="index"),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + staticfiles_urlpatterns()

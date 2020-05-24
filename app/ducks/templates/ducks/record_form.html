@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+{% if record %}
+    
+<h1 class="title">Update Record {{record.id}}</h1>
+{% else %}
+    
+<h1 class="title">Create Record</h1>
+{% endif %}
+<form action="" method="POST" accept-charset="utf-8">
+    {% csrf_token %}
+    <div id="form">
+           {% include "form.html" %} 
+        <div class="field mt-xs is-grouped">
+            <div class="control">
+                <button  type="submit"
+                    class="button is-info"> {% trans "Send" %}</button>
+            </div>
+            <div class="control">
+                <a class="button is-text" href="{% url 'record_list' %}"> {% trans "Cancel" %} </a>
+            </div>
+		{% if  record %}		
+			<div class="control is-right">
+				<a class="button is-danger">Delete</a>
+			</div>
+		{% endif %}
+        </div>
+    </div>
+</form>
+{% endblock content %}

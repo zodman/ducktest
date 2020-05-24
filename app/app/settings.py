@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'ducks',
     'loginas',
     'widget_tweaks',
+    'django_tables2',
 ]
 
 MIDDLEWARE = [

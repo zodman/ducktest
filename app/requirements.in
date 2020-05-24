@@ -2,3 +2,5 @@ django
 django-seed
 django-loginas
 django-widget-tweaks
+django-tables2
+bake-cli

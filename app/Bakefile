@@ -1,0 +1,4 @@
+reinit:
+    rm db.sqlite
+    python manage.py migrate
+    python populate.py

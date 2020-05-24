@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load render_table from django_tables2 %}
+{% block content %}
+<div class="buttons is-right">
+    <a class="button is-success" href="{% url 'record_add'%}">Record add</a>
+</div>
+
+	{% render_table table %}
+{% endblock content %}

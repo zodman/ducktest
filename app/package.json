@@ -5,15 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "parcel watch  media/src/*  -d media/dist/ --public-url /media/"
+    "watch": "parcel watch  media/src/*  -d media/dist/ --public-url /media/dist/"
   },
   "author": "",
   "license": "ISC",
+  "watchreload": {
+    "files": "**/*.{py,html}",
+    "reloadDelay": 2000
+  },
   "dependencies": {
+    "alpinejs": "^2.3.5",
     "bulma": "^0.8.2",
     "cross-env": "^7.0.2",
     "css-spaces": "git+https://github.com/zodman/css-spaces.git",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-watch-reload": "^1.0.0",
+    "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "sass": "^1.26.5"

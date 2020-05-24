@@ -1,21 +1,31 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.utils import timezone
+import django.utils.timezone
 from django.db import models
 
 
 class FoodType(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
+    class Meta:
+        ordering = ("name",)
 
     def __str__(self):
         return self.name
 
 class DuckType(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        ordering = ("name", )
+
+
+    def __str__(self):
+        return self.name
 
 
 class Record(models.Model):
-    recorddate = models.DateTimeField(default=timezone.now())
+    recorddate = models.DateTimeField(default=django.utils.timezone.now,
+                                      help_text="YYYY-mm-dd HH:MM:SS")
     food_type= models.ForeignKey(FoodType, on_delete=models.CASCADE)
     location= models.CharField(max_length=100)
     howmany_ducks = models.PositiveIntegerField()
@@ -23,7 +33,6 @@ class Record(models.Model):
     howmuch_food = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
 
     def __str__(self):
         return f'{self.recorddate}'
