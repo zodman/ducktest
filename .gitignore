@@ -118,8 +118,6 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/django
-app/node_modules
-*node_modules*
-app/media/dist/*
-
-app/reload
+node_modules
+media/dist/*
+static

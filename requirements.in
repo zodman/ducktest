@@ -6,6 +6,8 @@ django-widget-tweaks
 django-tables2
 django-registration-redux
 
+fabric
+patchwork
 
 coverage
 django-test-plus
