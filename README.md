@@ -1,4 +1,4 @@
-![Django CI](https://github.com/zodman/ducktest/workflows/Django%20CI/badge.svg)
+![Django CI](https://github.com/zodman/ducktest/workflows/Django%20CI/badge.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/zodman/ducktest/badge.svg?branch=master)](https://coveralls.io/github/zodman/ducktest?branch=master)
 
 
