@@ -36,6 +36,7 @@ jobs:
       with:
         key: ${{ secrets.SSH_KEY }}
         name: id_rsa # optional
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - name: Deploy with fabric
       run: fab -H zodman@178.62.7.89 deploy
 
