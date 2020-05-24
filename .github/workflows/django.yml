@@ -27,11 +27,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Tests
+      env: 
+        COVERALLS_REPO_TOKEN: ${{secret.COVERALLS_REPO_TOKEN}}
       run: |
         cd app
         bake test
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}        
-        base-path: app/
+        coverwalls
