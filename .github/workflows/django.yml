@@ -32,4 +32,4 @@ jobs:
       run: |
         cd app
         bake test
-        coverwalls
+        python -m coverwalls
