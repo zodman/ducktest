@@ -18,7 +18,7 @@ def test(c):
 @task
 def deploy(ctx):
     run("npm clean-install")
-    run("npm run build")
+#    run("npm run build")
     run("python manage.py collectstatic --noinput")
     rsync(ctx, ".", "app/ducktest", exclude=exclude_dirs)
     ctx.run("touch app/ducktest/app/wsgi.py")
