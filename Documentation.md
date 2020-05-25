@@ -25,6 +25,7 @@ check requirements.in file
 Why ?
 Well, I'm python developer. And I consider python ninja!
 
+## Components
 
 ##  Database
 
@@ -32,6 +33,7 @@ Well, I'm python developer. And I consider python ninja!
 
 ## Hours ?
 
+~ 15 hrs
 [Check the log](Log.md)
 
 

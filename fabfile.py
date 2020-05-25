@@ -30,3 +30,7 @@ def deploy(ctx):
             ctx.run("pip install -r requirements.txt")
             ctx.run("python manage.py migrate")
         ctx.run("touch app/wsgi.py")
+
+@task
+def log(ctx):
+    run("jrnl --export md > Log.md")
