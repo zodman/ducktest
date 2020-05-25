@@ -17,8 +17,11 @@ def test(c):
 
 @task
 def deploy(ctx):
-    run("npm install")
-    run("npm run build")
-    run("python manage.py collectstatic --noinput")
-    rsync(ctx, ".", "app/ducktest", exclude=exclude_dirs)
-    ctx.run("touch app/ducktest/app/wsgi.py")
+    run("npm install", echo=True)
+    run("npm run build", echo=True)
+    run("python manage.py collectstatic --noinput", echo=True)
+    rsync(ctx, ".", "apps/ducktest", exclude=exclude_dirs)
+    with ctx.cd("apps/ducktest"):
+        with ctx.prefix("source ~/.virtualenvs/ducktest/bin/activate"):
+            ctx.run("pip install -r requirements.txt")
+        ctx.run("touch app/wsgi.py")

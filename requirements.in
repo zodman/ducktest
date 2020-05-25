@@ -8,6 +8,7 @@ django-registration-redux
 
 fabric
 patchwork
+django-webserver[gunicorn]
 
 coverage
 django-test-plus
