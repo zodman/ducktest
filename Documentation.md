@@ -27,6 +27,13 @@ Well, I'm python developer. And I consider python ninja!
 
 ## Components
 
+### Package
+![packages_duck](packages_duck.png)
+
+### Classes
+![classess_duck](classes_duck.png)
+
+
 ##  Database
 
 ![database](graph_models.png)
