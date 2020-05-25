@@ -29,7 +29,7 @@ def deploy(ctx):
         with ctx.prefix("source ~/.virtualenvs/ducktest/bin/activate"):
             ctx.run("pip install -r requirements.txt")
             ctx.run("python manage.py migrate")
-        ctx.run("touch app/wsgi.py")
+    ctx.run("sudo supervisorctl restart ducktest")
 
 @task
 def log(ctx):
