@@ -10,44 +10,60 @@ import django_tables2 as tables
 from django.urls import reverse_lazy
 from .models import Record
 
+
 class RecordTable(tables.Table):
-    actions = tables.TemplateColumn(template_name="ducks/_column_actions.html",
-                                    orderable=False)
+    actions = tables.TemplateColumn(
+        template_name="ducks/_column_actions.html", orderable=False
+    )
+
     class Meta:
         model = Record
 
+
 class RecordList(SuccessMessageMixin, SingleTableView):
     model = Record
-    table_class= RecordTable
+    table_class = RecordTable
     paginate_by = 5
+
 
 record_list = login_required(RecordList.as_view())
 
-class RecordEdit(SuccessMessageMixin,UpdateView):
+
+class RecordEdit(SuccessMessageMixin, UpdateView):
     model = Record
     fields = "__all__"
     success_url = reverse_lazy("record_list")
-    success_message  = "Record updated"
+    success_message = "Record updated"
+
 
 record_edit = login_required(RecordEdit.as_view())
 
 
 class RecordCreate(SuccessMessageMixin, CreateView):
     model = Record
-    fields =("recorddate","food_type", "location", "howmany_ducks",
-            "howmuch_food", "duck_type") 
+    fields = (
+        "recorddate",
+        "food_type",
+        "location",
+        "howmany_ducks",
+        "howmuch_food",
+        "duck_type",
+    )
     success_url = reverse_lazy("record_list")
-    success_message  = "Record created"
+    success_message = "Record created"
+
 
 record_add = login_required(RecordCreate.as_view())
 
+
 class RecordDelete(SuccessMessageMixin, DeleteView):
-    model= Record
+    model = Record
     success_url = reverse_lazy("record_list")
-    success_message  = "Record deleted"
+    success_message = "Record deleted"
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, self.success_message)
         return super().delete(request, *args, **kwargs)
+
 
 record_del = login_required(RecordDelete.as_view())

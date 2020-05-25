@@ -1,4 +1,4 @@
-from django.urls import  path, include
+from django.urls import path, include
 from django.conf import settings
 from .views import record_list, record_edit, record_add, record_del
 

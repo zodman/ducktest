@@ -10,36 +10,76 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='DuckType',
+            name="DuckType",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='FoodType',
+            name="FoodType",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
             ],
         ),
         migrations.CreateModel(
-            name='Record',
+            name="Record",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('recorddate', models.DateTimeField(default=datetime.datetime(2020, 5, 23, 19, 4, 11, 533456, tzinfo=utc))),
-                ('location', models.CharField(max_length=100)),
-                ('howmany_ducks', models.PositiveIntegerField()),
-                ('howmuch_food', models.CharField(max_length=100)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('duck_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ducks.DuckType')),
-                ('food_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='ducks.FoodType')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "recorddate",
+                    models.DateTimeField(
+                        default=datetime.datetime(
+                            2020, 5, 23, 19, 4, 11, 533456, tzinfo=utc
+                        )
+                    ),
+                ),
+                ("location", models.CharField(max_length=100)),
+                ("howmany_ducks", models.PositiveIntegerField()),
+                ("howmuch_food", models.CharField(max_length=100)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                (
+                    "duck_type",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="ducks.DuckType"
+                    ),
+                ),
+                (
+                    "food_type",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="ducks.FoodType"
+                    ),
+                ),
             ],
         ),
     ]

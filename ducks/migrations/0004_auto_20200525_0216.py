@@ -6,12 +6,11 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ducks', '0003_auto_20200524_0339'),
+        ("ducks", "0003_auto_20200524_0339"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='record',
-            options={'get_latest_by': 'id', 'ordering': ('recorddate',)},
+            name="record", options={"get_latest_by": "id", "ordering": ("recorddate",)},
         ),
     ]

@@ -7,27 +7,24 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ducks', '0001_initial'),
+        ("ducks", "0001_initial"),
     ]
 
     operations = [
-        migrations.AlterModelOptions(
-            name='ducktype',
-            options={'ordering': ('name',)},
-        ),
+        migrations.AlterModelOptions(name="ducktype", options={"ordering": ("name",)},),
         migrations.AlterField(
-            model_name='ducktype',
-            name='name',
+            model_name="ducktype",
+            name="name",
             field=models.CharField(max_length=100, unique=True),
         ),
         migrations.AlterField(
-            model_name='foodtype',
-            name='name',
+            model_name="foodtype",
+            name="name",
             field=models.CharField(max_length=100, unique=True),
         ),
         migrations.AlterField(
-            model_name='record',
-            name='recorddate',
+            model_name="record",
+            name="recorddate",
             field=models.DateTimeField(default=django.utils.timezone.now),
         ),
     ]

@@ -7,33 +7,24 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ducks', '0002_auto_20200523_2211'),
+        ("ducks", "0002_auto_20200523_2211"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='ducktype',
-            options={'get_latest_by': 'id', 'ordering': ('name',)},
+            name="ducktype", options={"get_latest_by": "id", "ordering": ("name",)},
         ),
         migrations.AlterModelOptions(
-            name='foodtype',
-            options={'get_latest_by': 'id', 'ordering': ('name',)},
+            name="foodtype", options={"get_latest_by": "id", "ordering": ("name",)},
         ),
-        migrations.AlterModelOptions(
-            name='record',
-            options={'get_latest_by': 'id'},
-        ),
-        migrations.RemoveField(
-            model_name='record',
-            name='created_at',
-        ),
-        migrations.RemoveField(
-            model_name='record',
-            name='updated_at',
-        ),
+        migrations.AlterModelOptions(name="record", options={"get_latest_by": "id"},),
+        migrations.RemoveField(model_name="record", name="created_at",),
+        migrations.RemoveField(model_name="record", name="updated_at",),
         migrations.AlterField(
-            model_name='record',
-            name='recorddate',
-            field=models.DateTimeField(default=django.utils.timezone.now, help_text='YYYY-mm-dd HH:MM:SS'),
+            model_name="record",
+            name="recorddate",
+            field=models.DateTimeField(
+                default=django.utils.timezone.now, help_text="YYYY-mm-dd HH:MM:SS"
+            ),
         ),
     ]
