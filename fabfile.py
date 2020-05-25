@@ -17,6 +17,7 @@ def test(c):
 
 @task
 def deploy(ctx):
+    run("ls -lah ", echo=True)
     run("npm install", echo=True)
     run("npm run build", echo=True)
     run("python manage.py collectstatic --noinput", echo=True)
