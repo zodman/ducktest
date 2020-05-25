@@ -44,6 +44,4 @@ django request-response https://i.stack.imgur.com/rLfSC.jpg
 ~ 15 hrs
 [Check the log](Log.md)
 
-
-
-
+provided by [jrnl.sh](https://jrnl.sh)
