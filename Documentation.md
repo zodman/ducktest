@@ -1,7 +1,7 @@
 ## website
 
 
-![website ducktest](https://ducktest.python3.ninja)
+[website ducktest](https://ducktest.python3.ninja)
 
 
 
@@ -32,7 +32,7 @@ Well, I'm python developer. And I consider python ninja!
 
 ##  Database
 
-[]()[database](graph_models.png)
+![database](graph_models.png)
 
 
 
