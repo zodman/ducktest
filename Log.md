@@ -46,3 +46,6 @@ Right now, I'm only missing the Report and the Documentation. I will work some 2
 
 To be honest it is the first time who someone ask for components diagrams. I think because
 I had working on small teams. And it isn't necessary. 
+### 2020-05-25 00:47 Oooh I miss the dashboard ...
+
+let's work on it 

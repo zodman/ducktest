@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "django_tables2",
     "django_webserver",
     "chartjs",
+    "active_link",
 ]
 
 MIDDLEWARE = [

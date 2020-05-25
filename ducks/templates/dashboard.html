@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-   <div class="hero">
    
+        <nav class="breadcrumb is-centered is-large ">
+        <ul>
+            <li>{{ qss1.this_day }} records today </li>
+            <li>{{ qss1.this_week }} records this week </li>
+            <li>{{ qss1.this_week }} records this month </li>
+            <li>{{ qss1.this_year }} records this year </li>
+            <li class="is-active">{{ qss1.until_now }} records  Until now </li>
+        </ul>
+        </nav>
+
+   <div class="hero">
 	  <canvas id="myChart" width="500" height="200"></canvas>
         <script type="text/javascript">
             $.get('{% url "graph1" %}', function(data) {
@@ -11,7 +21,21 @@
                 });
             });
         </script>
-
    </div>
+
+   {% comment %}
+       
+   <div class="hero">
+         <div id="myHighChart" style="height: 200px; width: 500px;"></div>
+         
+        <script type="text/javascript">
+          $.get("{% url 'graph2' %}", function (data) {
+                data["chart"] = {type: "pie"};
+                data["chart"] = {type: "pie"};
+                $("#myHighChart").highcharts(data);
+        });
+        </script>
+   </div>
+   {% endcomment %}
 
 {% endblock  %}

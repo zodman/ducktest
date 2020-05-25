@@ -6,6 +6,8 @@ django-widget-tweaks
 django-tables2
 django-registration-redux
 django-chartjs
+django-qsstats-magic
+django-active-link
 
 
 fabric
