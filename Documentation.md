@@ -1,7 +1,7 @@
 ## website
 
 
-[website ducktest](https://ducktest.python3.ninja)
+[website ducktest 🦆](https://ducktest.python3.ninja)
 
 
 
