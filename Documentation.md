@@ -33,6 +33,7 @@ Well, I'm python developer. And I consider python ninja!
 ### Classes
 ![classess_duck](classes_ducks.png)
 
+django request-response https://i.stack.imgur.com/rLfSC.jpg
 
 ##  Database
 
