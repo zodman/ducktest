@@ -17,6 +17,11 @@ class DuckTest(TestCase):
         self.faker = faker.Faker()
         self.user = self.make_user("u1")
 
+    def test_pages(self):
+        with self.login(self.user):
+            self.get_check_200("graph1")
+            self.get_check_200("dashboard")
+
     def test_create(self):
         food_type = FoodType.objects.latest()
         duck_type = DuckType.objects.latest()

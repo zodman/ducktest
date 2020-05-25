@@ -29,20 +29,6 @@ class LineChartJSONView(BaseLineChartView):
 
 graph1 = LineChartJSONView.as_view()
 
-class Graph2(HighChartPieView):
-    def get_labels(self):
-        labels = DuckType.objects.annotate(num_records=models.Count("record"))
-        return [i.name for i in labels if i.num_records > 0]
-    def get_providers(self):
-        labels = DuckType.objects.annotate(num_records=models.Count("record"))
-        return [i.name for i in labels if i.num_records > 0]
-
-    def get_data(self):
-        data = DuckType.objects.annotate(num_records=models.Count("record"))
-        return [i.num_records for i in data if i.num_records > 0]
-
-graph2 = Graph2.as_view()
-
 
 class Dashboard(TemplateView):
     template_name="dashboard.html"
