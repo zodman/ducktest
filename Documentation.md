@@ -1,9 +1,5 @@
 ## website
-
-
 [website ducktest 🦆](https://ducktest.python3.ninja)
-
-
 
 ## Approach
 
@@ -34,7 +30,9 @@ Well, I'm python developer. And I consider python ninja!
 
 ![database](graph_models.png)
 
+## Hours ?
 
+[Check the log](Log.md)
 
 
 
