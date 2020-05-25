@@ -13,7 +13,7 @@ SECRET_KEY = ')%1#9=gb^ixzilr6$^35@2ub)p1=o7t9=)vh2v@5$+yi1o8b%g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ducktest.python3.ninja', ]
 
 
 # Application definition
