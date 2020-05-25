@@ -1,8 +1,0 @@
-reinit:
-    rm db.sqlite3
-    python manage.py migrate
-    python populate.py
-test:
-    python manage.py check
-    coverage run manage.py test --failfast
-    coverage report -m

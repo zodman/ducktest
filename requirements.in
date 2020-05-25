@@ -11,6 +11,5 @@ patchwork
 
 coverage
 django-test-plus
-bake-cli==0.12.0
 coveralls
 

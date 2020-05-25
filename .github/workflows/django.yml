@@ -39,7 +39,7 @@ jobs:
       env: 
         COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
       run: |
-        bake test
+        fab test
         coveralls
     - name: Deploy with fabric
       run: fab -e -H zodman@178.62.7.89 deploy
