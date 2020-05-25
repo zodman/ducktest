@@ -28,10 +28,10 @@ Well, I'm python developer. And I consider python ninja!
 ## Components
 
 ### Package
-![packages_duck](packages_duck.png)
+![packages_duck](packages_ducks.png)
 
 ### Classes
-![classess_duck](classes_duck.png)
+![classess_duck](classes_ducks.png)
 
 
 ##  Database

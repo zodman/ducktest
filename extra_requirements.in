@@ -1,5 +1,11 @@
+
+# For graph de modles
 django-extensions
 pygraphviz
 pyparsing 
 pydot
+# using pyreverse for graph the components packages and clasess
 pylint
+
+#grip markdown preview
+grip
