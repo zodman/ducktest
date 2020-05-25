@@ -32,7 +32,7 @@ class Record(models.Model):
     location= models.CharField(max_length=100)
     howmany_ducks = models.PositiveIntegerField()
     duck_type= models.ForeignKey(DuckType, on_delete=models.CASCADE)
-    howmuch_food = models.CharField(max_length=100)
+    howmuch_food = models.CharField(max_length=100, help_text="For example: 4 oz, 10 pounds")
 
     class Meta:
         ordering = ("recorddate",)
