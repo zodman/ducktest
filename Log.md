@@ -49,3 +49,6 @@ I had working on small teams. And it isn't necessary.
 ### 2020-05-25 00:47 Oooh I miss the dashboard ...
 
 let's work on it 
+### 2020-05-25 02:53 I think i finish.
+
+small graph for a dashoard it is the end, and goodbye 
