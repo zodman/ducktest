@@ -6,60 +6,19 @@
     <title>Rubber Duck app 🦆</title>
 	<link rel="stylesheet" href="{{MEDIA_URL}}dist/main.css">
     <script src="{{MEDIA_URL}}dist/main.js"></script>
+    <script type="text/javascript" src="{{STATIC_URL}}js/Chart.min.js"></script>
+
   </head>
   <body>
-
       {% block body %}
-          
-
   <section class="section">
     <div class="container">
-
-    {% include "messages.html" %}
-
-{% if request.user.is_authenticated %}
-<a href="{% url 'auth_logout' %}">Logout cuack </a>
-{% endif %}
-
+        {% include "messages.html" %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'auth_logout' %}">Logout cuack </a>
+        {% endif %}
         {% block content %}
-            
-                    <div class="hero  is-primary is-bold">
-                <div class="hero-body">
-                    <div class="container">
-                        <div class="columns is-vcentered">
-                            <div class="column is-6 ">
-                                <h1 class="title is-spaced is-size-1-desktop">
-                                    The Duck app
-                                </h1>
-                                <h2 class="subtitle">
-                                    A place when the Phd's can research all related to Ducks .. 
-                                </h2>
-                                <div class="buttons centered">
-                                    {% if request.user.is_authenticated %}
-                                    <div class="lp-sl">
-                                    hola ... {{request.user.username}}
-                                    </div>
-                                        <a class="button is-light " href="{% url 'record_list' %}"> Go cuack</a>
-                                        {% else %}
-                                            
-                                    <a href="{% url 'registration_register' %}"
-                                        class="button is-success is-light is-large">
-                                        {% trans "Signup Cuak" %}
-                                        </a>
-                                    <a href="{% url 'auth_login' %}" class="button is-outlined is-info is-light is-large">Login Cuack</a>
-                                    {% endif %}
-                                </div>
-
-                            </div>
-
-                            <div class="column">
-                                <img class="card shadow" src="https://i.imgur.com/jWmoHKOl.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+           asdsadsada content
         {% endblock content %}
     </div>
   </section>

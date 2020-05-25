@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+   <div class="hero">
+   
+	  <canvas id="myChart" width="500" height="200"></canvas>
+        <script type="text/javascript">
+            $.get('{% url "graph1" %}', function(data) {
+                var ctx = $("#myChart").get(0).getContext("2d");
+                new Chart(ctx, {
+                    type: 'line', data: data
+                });
+            });
+        </script>
+
+   </div>
+
+{% endblock  %}

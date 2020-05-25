@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render
 from django.views.generic import ListView, UpdateView, CreateView, DeleteView
+from django.views.generic import TemplateView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -9,7 +10,26 @@ from django_tables2 import SingleTableView
 import django_tables2 as tables
 from django.urls import reverse_lazy
 from .models import Record
+from chartjs.views.lines import BaseLineChartView
 
+class LineChartJSONView(BaseLineChartView):
+    def get_labels(self):
+        labels = Record.objects.values_list('recorddate', flat=True)
+        return list(labels)
+    def get_providers(self):
+        return ["How many  🦆 feeds",]
+
+    def get_data(self):
+        data = Record.objects.values_list("howmany_ducks", flat=True)
+        return [list(data)]
+
+
+graph1 = LineChartJSONView.as_view()
+
+class Dashboard(TemplateView):
+    template_name="dashboard.html"
+
+dashboard = login_required(Dashboard.as_view())
 
 class RecordTable(tables.Table):
     actions = tables.TemplateColumn(

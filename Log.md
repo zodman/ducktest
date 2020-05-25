@@ -42,3 +42,7 @@ Unittest with 100%. Yeah! I had near of 10 hrs apply to the project.
 I had some tweaks to the html.
 
 Right now, I'm only missing the Report and the Documentation. I will work some 2hrs to the simple dashboard. And make the Documentation. 
+### 2020-05-25 00:47 Documentation finish!
+
+To be honest it is the first time who someone ask for components diagrams. I think because
+I had working on small teams. And it isn't necessary. 

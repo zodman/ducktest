@@ -7,10 +7,10 @@
 		class="message is-small  {% if message.tags %} is-{{ message.tags }}{% endif %}">
 
         <div class="message-header">
-        <p>Message</p>
+            <p>Message</p>
     
-          <button x-on:click="isOpen=false" class="delete is-small"  aria-label="delete"></button>
-      </div>
+              <button x-on:click="isOpen=false" class="delete is-small"  aria-label="delete"></button>
+          </div>
         
           <div class="message-body">
             {{ message }}  

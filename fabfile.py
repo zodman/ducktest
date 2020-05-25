@@ -33,5 +33,10 @@ def deploy(ctx):
 
 @task
 def log(ctx):
+    run("pip-compile requirements.in -o requirements.txt")
     run("jrnl --export md > Log.md")
     run("DJANGO_SETTINGS_MODULE=app.extra_settings python manage.py graph_models --pygraphviz -o graph_models.png ducks -g")
+
+@task
+def t(ctx):
+    run("touch media/src/main.js")
