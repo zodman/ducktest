@@ -22,7 +22,7 @@ django-tables2==2.3.1     # via -r requirements.in
 django-test-plus==1.4.0   # via -r requirements.in
 django-webserver[gunicorn]==1.1.0  # via -r requirements.in
 django-widget-tweaks==1.4.8  # via -r requirements.in
-django==3.0.6             # via -r requirements.in, django-seed, django-tables2, django-webserver
+django==3.0.7             # via -r requirements.in, django-seed, django-tables2, django-webserver
 docopt==0.6.2             # via coveralls
 fabric==2.5.0             # via -r requirements.in, patchwork
 faker==4.1.0              # via django-seed
